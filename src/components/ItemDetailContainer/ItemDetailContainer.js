@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import productsData from '../../asyncMock';
 import ItemCount from '../ItemCount/ItemCount'
@@ -8,7 +8,6 @@ const ItemDetailContainer = () => {
     const [product, setProduct] = useState(null);
 
     useEffect(() => {
-        // Simulate fetching product details based on itemId
         const selectedProduct = productsData.find(product => product.id === itemId);
         setProduct(selectedProduct);
     }, [itemId]);
