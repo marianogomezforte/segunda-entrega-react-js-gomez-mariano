@@ -17,12 +17,12 @@ const ItemDetailContainer = () => {
     }
 
     return (
-        <div className="item-detail-container">
-        <h3>{product.nombre}</h3>
-        <img src={product.img} alt={product.nombre} />
-        <p>Precio: ${product.precio}</p>
-        <p>{product.descripcion}</p>
-        <ItemCount stock={product.stock} initial={1} onAdd={(cantidad)=> console.log('cantidad agregada',cantidad)}/>
+        <div className="flex flex-col">
+            <h3>{product.nombre}</h3>
+            <img src={product.img} alt={product.nombre} className="self-center w-96 h-96"/>
+            <p>Precio: ${product.precio}</p>
+            <p>{product.descripcion}</p>
+            <ItemCount stock={product.stock} initial={1} onAdd={(cantidad)=> console.log('cantidad agregada',cantidad)}/>
         </div>
     );
 };
